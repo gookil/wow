@@ -186,7 +186,7 @@ router.post('/replys',  async (req, res) => {
         res.send({ reply });
 });
 
-router.put('/replys', authMiddleware, async (req, res) => {
+router.put('/replys', async (req, res) => {
   const { nickname } = res.locals.user;
   const { postId, commentsID, comment } = req.body;
 
